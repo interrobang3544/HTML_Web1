@@ -4,40 +4,7 @@
   <title>WEB1 - html</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
-  <script>
-    var Links = {
-      SetColor:function(color){
-        var target_list = document.querySelectorAll('a');
-        var i = 0;
-        while(i < target_list.length){
-          target_list[i].style.color = color;
-          i = i + 1
-        }
-      }
-    }
-    var Body = {
-      SetColor:function(color){
-        document.querySelector('body').style.color = color;
-      },
-      SetBackgroundColor:function(color){
-        document.querySelector('body').style.backgroundColor = color;
-      }
-    }
-    function NightDayHandler(self){
-      var target = document.querySelector('body');
-      if(self.value === 'Night mode'){
-        Body.SetBackgroundColor('black');
-        Body.SetColor('white');
-        self.value = 'Day mode';
-        Links.SetColor('powderblue');
-      } else {
-        Body.SetBackgroundColor('white');
-        Body.SetColor('black');
-        self.value = 'Night mode';
-        Links.SetColor('blue');
-      }
-    }
-  </script>
+  <script src='colors.js'></script>
 </head>
 <body>
   <h1><a href="index.html">WEB</a></h1>
