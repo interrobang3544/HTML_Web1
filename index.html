@@ -4,31 +4,36 @@
     <title>WEB1 - html</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
+    <script>
+    function NightDayHandler(self){
+      var target = document.querySelector('body');
+      var target_list = document.querySelectorAll('a');
+      var i = 0;
+      if(self.value === 'Night mode'){
+        target.style.backgroundColor = 'black';
+        target.style.color='white';
+        while(i < target_list.length){
+          target_list[i].style.color = 'powderblue';
+          i = i + 1
+        }
+        self.value = 'Day mode';
+      } else {
+        target.style.backgroundColor='white';
+        target.style.color='black';
+        while(i < target_list.length){
+          target_list[i].style.color = 'blue';
+          i = i + 1
+        }
+        self.value = 'Night mode';
+      }
+    }
+    </script>
   </head>
 
 <body>
   <h1><a href="index.html">WEB</a></h1>
   <input id='night_day' type="button" value='Night mode' onclick="
-  var target = document.querySelector('body');
-  var target_list = document.querySelectorAll('a');
-  var i = 0;
-  if(this.value === 'Night mode'){
-    target.style.backgroundColor = 'black';
-    target.style.color='white';
-    while(i < target_list.length){
-      target_list[i].style.color = 'powderblue';
-      i = i + 1
-    }
-    this.value = 'Day mode';
-  } else {
-    target.style.backgroundColor='white';
-    target.style.color='black';
-    while(i < target_list.length){
-      target_list[i].style.color = 'blue';
-      i = i + 1
-    }
-    this.value = 'Night mode';
-  }
+  NightDayHandler(this)
   ">
     <div id="grid">
       <ol>
