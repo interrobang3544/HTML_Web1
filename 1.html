@@ -13,6 +13,7 @@
   </head>
 
 <body>
+  <h1><a href="index.html">WEB</a></h1>
   <input id='night_day' type="button" value='Night mode' onclick="
   if(document.querySelector('#night_day').value === 'Night mode'){
     document.querySelector('body').style.backgroundColor = 'black';
@@ -20,7 +21,8 @@
     document.querySelector('a').style.color='white';
     document.querySelector('#night_day').value = 'Day mode';
   } else {
-    document.querySelector('body').style.backgroundColor='white'; document.querySelector('body').style.color='black';
+    document.querySelector('body').style.backgroundColor='white';
+    document.querySelector('body').style.color='black';
     document.querySelector('a').style.color='black';
     document.querySelector('#night_day').value = 'Night mode';
   }
